@@ -1,6 +1,8 @@
-*nest-books-api*
+***nest-books-api***
 
 ## About
+
+*TBW*
 
 ## Technology
 
@@ -29,3 +31,11 @@ $ yarn run start
 ```
 
 → http://localhost:3090
+
+#### Utility Commands
+
+* Show MySQL
+
+```
+$ docker exec -it books_mysql bash -c "mysql -u root -p"
+```
