@@ -37,4 +37,9 @@ export class BookService {
     book.releasedAt = body.releasedAt || book.releasedAt;
     await this.bookRepository.save(book);
   }
+
+  async delete(id: string) {
+    const book = await this.findOne(id);
+    await this.bookRepository.delete(book.id);
+  }
 }
