@@ -1,5 +1,6 @@
-import { IBook } from '../book.interface';
+import { IBook } from './book.interface';
 
+/** ブック登録リクエストボディ */
 export class CreateBookBody implements IBook {
   readonly id: string;
   readonly name: string;
