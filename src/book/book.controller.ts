@@ -20,17 +20,20 @@ export class BookController {
   }
 
   @Post()
-  async registerBook(@Body() body: CreateBookBody) {
+  async registerBook(@Body() body: CreateBookBody): Promise<string> {
     await this.bookService.create(body);
+    return 'OK';
   }
 
   @Put(':id')
-  async updateBook(@Param() params, @Body() body: UpdateBookBody) {
+  async updateBook(@Param() params, @Body() body: UpdateBookBody): Promise<string> {
     await this.bookService.update(params.id, body);
+    return 'OK';
   }
 
   @Delete(':id')
-  async deleteBook(@Param() params) {
+  async deleteBook(@Param() params): Promise<string> {
     await this.bookService.delete(params.id);
+    return 'OK';
   }
 }
