@@ -1,9 +1,9 @@
-import { Controller, Get, Post, Param, Body } from '@nestjs/common';
+import { Controller, Get, Post, Put, Param, Body } from '@nestjs/common';
 
 // from app
 import { BookService } from './book.service';
 import { Book } from './book.entity';
-import { CreateBookBody } from './book.dto';
+import { CreateBookBody, UpdateBookBody } from './book.dto';
 
 @Controller('books')
 export class BookController {
@@ -22,5 +22,10 @@ export class BookController {
   @Post()
   async registerBook(@Body() body: CreateBookBody) {
     await this.bookService.create(body);
+  }
+
+  @Put(':id')
+  async updateBook(@Param() params, @Body() body: UpdateBookBody) {
+    await this.bookService.update(params.id, body);
   }
 }
