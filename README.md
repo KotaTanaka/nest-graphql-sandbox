@@ -27,7 +27,7 @@ $ yarn
 
 ```bash
 $ docker-compose up -d
-$ yarn start
+$ yarn start:dev
 ```
 
 → http://localhost:3090
