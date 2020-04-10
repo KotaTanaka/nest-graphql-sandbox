@@ -11,7 +11,8 @@ import {
 // from app
 import { BookService } from './book.service';
 import { Book } from './book.entity';
-import { CreateBookBody, UpdateBookBody } from './book.dto';
+import { CreateBookBody } from './dto/create-book.dto';
+import { UpdateBookBody } from './dto/update-book.dto';
 
 @Controller('books')
 export class BookController {
