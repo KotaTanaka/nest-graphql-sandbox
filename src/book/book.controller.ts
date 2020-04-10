@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Param,
+  Body,
+} from '@nestjs/common';
 
 // from app
 import { BookService } from './book.service';
@@ -26,7 +34,10 @@ export class BookController {
   }
 
   @Put(':id')
-  async updateBook(@Param() params, @Body() body: UpdateBookBody): Promise<string> {
+  async updateBook(
+    @Param() params,
+    @Body() body: UpdateBookBody,
+  ): Promise<string> {
     await this.bookService.update(params.id, body);
     return 'OK';
   }

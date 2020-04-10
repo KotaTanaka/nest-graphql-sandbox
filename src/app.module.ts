@@ -8,10 +8,7 @@ import { AppService } from './app.service';
 import { BookModule } from './book/book.module';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(),
-    BookModule,
-  ],
+  imports: [TypeOrmModule.forRoot(), BookModule],
   controllers: [AppController],
   providers: [AppService],
 })
