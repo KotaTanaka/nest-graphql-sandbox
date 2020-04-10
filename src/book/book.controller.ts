@@ -13,7 +13,7 @@ import { BookService } from './book.service';
 import { Book } from './book.entity';
 import { CreateBookBody } from './dto/create-book-body.dto';
 import { UpdateBookBody } from './dto/update-book-body.dto';
-import { SuccessResponse } from './model/success-response.model';
+import { SuccessResponse } from '../model/success-response.model';
 
 @Controller('books')
 export class BookController {
