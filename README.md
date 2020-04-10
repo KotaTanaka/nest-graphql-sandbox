@@ -1,5 +1,7 @@
 ***nest-books-api***
 
+*[Frontend -  next-books-spa](https://github.com/KotaTanaka/next-books-spa)*
+
 ## About
 
 *TBW*
@@ -10,15 +12,21 @@
 * [TypeScript](https://github.com/microsoft/TypeScript)
 * [TypeORM](https://github.com/typeorm/typeorm)
 
+## Require
+
+* Node
+* Docker, docker-compose
+
 ## Getting Started
 
 #### Install
 
 ```bash
-$ git clone git@github.com:KotaTanaka/nest-books-api.git
+$ npm i -g @nestjs/cli
 ```
 
 ```bash
+$ git clone git@github.com:KotaTanaka/nest-books-api.git
 $ cd nest-books-api
 $ yarn
 ```
