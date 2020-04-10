@@ -14,20 +14,20 @@
 
 #### Install
 
-```
+```bash
 $ git clone git@github.com:KotaTanaka/nest-books-api.git
 ```
 
-```
+```bash
 $ cd nest-books-api
 $ yarn
 ```
 
 #### Run
 
-```
+```bash
 $ docker-compose up -d
-$ yarn run start
+$ yarn start
 ```
 
 → http://localhost:3090
@@ -36,6 +36,17 @@ $ yarn run start
 
 * Show MySQL
 
-```
+```bash
 $ docker exec -it books_mysql bash -c "mysql -u root -p"
+```
+
+* Lint
+
+
+```bash
+# Lint error check by TSLint
+$ yarn lint
+
+# Bulk format by Prettier
+$ yarn format
 ```
