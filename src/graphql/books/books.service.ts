@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 // from app
-import { Book } from '@/graphql/books/book';
+import { Book } from '@/graphql/books/book.entity';
 
 @Injectable()
 export class BooksService {

@@ -1,7 +1,7 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 
 // from app
-import { Book } from '@/graphql/books/book';
+import { Book } from '@/graphql/books/book.entity';
 import { BooksService } from '@/graphql/books/books.service';
 
 @Resolver('Books')
