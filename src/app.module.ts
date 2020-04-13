@@ -1,4 +1,3 @@
-import { join } from 'path';
 import { Module } from '@nestjs/common';
 // import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
@@ -14,9 +13,7 @@ import { BooksModule } from './graphql/books/books.module';
   imports: [
     GraphQLModule.forRoot({
       playground: true,
-      autoSchemaFile: 'schema.graphql'
-      // autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      // autoSchemaFile: true,
+      autoSchemaFile: 'src/graphql/schema.gql',
     }),
     BooksModule,
   ],
