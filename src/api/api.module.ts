@@ -4,10 +4,10 @@ import { Connection } from 'typeorm';
 
 // from app
 import { HelloController } from '@/api/hello.controller';
-import { BookModule } from '@/api/books/book.module';
+import { BooksModule } from '@/api/books/books.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), BookModule],
+  imports: [TypeOrmModule.forRoot(), BooksModule],
   controllers: [HelloController],
 })
 export class BooksApiModule {

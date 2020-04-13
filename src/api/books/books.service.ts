@@ -8,7 +8,7 @@ import { UpdateBookBody } from '@/api/books/dto/update-book-body.dto';
 import { Book } from '@/api/books/book.entity';
 
 @Injectable()
-export class BookService {
+export class BooksService {
   constructor(
     @InjectRepository(Book)
     private readonly bookRepository: Repository<Book>,
