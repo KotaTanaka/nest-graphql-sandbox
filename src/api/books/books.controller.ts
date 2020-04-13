@@ -9,15 +9,15 @@ import {
 } from '@nestjs/common';
 
 // from app
-import { BookService } from '@/api/books/book.service';
+import { BooksService } from '@/api/books/books.service';
 import { Book } from '@/api/books/book.entity';
 import { CreateBookBody } from '@/api/books/dto/create-book-body.dto';
 import { UpdateBookBody } from '@/api/books/dto/update-book-body.dto';
 import { SuccessResponse } from '@/api/model/success-response.model';
 
 @Controller('books')
-export class BookController {
-  constructor(private readonly bookService: BookService) {}
+export class BooksController {
+  constructor(private readonly bookService: BooksService) {}
 
   @Get()
   async getBooks(): Promise<Book[]> {
