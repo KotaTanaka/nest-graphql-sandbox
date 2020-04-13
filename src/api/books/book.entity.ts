@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 
 // from app
-import { IBook } from '@/book/book.interface';
+import { IBook } from '@/api/books/book.interface';
 
 @Entity()
 export class Book implements IBook {

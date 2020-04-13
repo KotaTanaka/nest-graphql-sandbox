@@ -1,17 +1,13 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Connection } from 'typeorm';
 
 // from app
-import { AppController } from '@/app.controller';
-import { AppService } from '@/app.service';
-import { BookModule } from '@/book/book.module';
+import { BooksApiModule } from '@/api/api.module';
+import { BooksGqlModule } from '@/graphql/graphql.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), BookModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    BooksApiModule,
+    BooksGqlModule,
+  ],
 })
-export class AppModule {
-  constructor(private readonly connection: Connection) {}
-}
+export class AppModule {}

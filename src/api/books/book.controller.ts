@@ -9,11 +9,11 @@ import {
 } from '@nestjs/common';
 
 // from app
-import { BookService } from '@/book/book.service';
-import { Book } from '@/book/book.entity';
-import { CreateBookBody } from '@/book/dto/create-book-body.dto';
-import { UpdateBookBody } from '@/book/dto/update-book-body.dto';
-import { SuccessResponse } from '@/model/success-response.model';
+import { BookService } from '@/api/books/book.service';
+import { Book } from '@/api/books/book.entity';
+import { CreateBookBody } from '@/api/books/dto/create-book-body.dto';
+import { UpdateBookBody } from '@/api/books/dto/update-book-body.dto';
+import { SuccessResponse } from '@/api/model/success-response.model';
 
 @Controller('books')
 export class BookController {
