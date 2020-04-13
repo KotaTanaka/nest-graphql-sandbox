@@ -1,7 +1,17 @@
 import { Module } from '@nestjs/common';
-import { BooksResolver } from './books.resolver';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Connection } from 'typeorm';
+
+// from app
+import { BooksResolver } from '@/graphql/books/books.resolver';
+import { BooksService } from '@/graphql/books/books.service';
+import { Book } from '@/graphql/books/book';
 
 @Module({
-  providers: [BooksResolver],
+  providers: [BooksResolver, BooksService],
+  imports: [TypeOrmModule.forFeature([Book])],
+  exports: [TypeOrmModule],
 })
-export class BooksModule {}
+export class BooksModule {
+  constructor(private readonly connection: Connection) {}
+}

@@ -1,25 +1,15 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
-import { Book } from '@/graphql/books/book';
 
-const SAMPLE_BOOKS: Book[] = [
-  {
-    id: '0',
-    name: 'A',
-  },
-  {
-    id: '1',
-    name: 'B',
-  },
-  {
-    id: '2',
-    name: 'C',
-  },
-];
+// from app
+import { Book } from '@/graphql/books/book';
+import { BooksService } from '@/graphql/books/books.service';
 
 @Resolver('Books')
 export class BooksResolver {
-  @Query(returns => [Book])
+  constructor(private readonly booksService: BooksService) {}
+
+  @Query(() => [Book])
   async books(): Promise<Book[]> {
-    return SAMPLE_BOOKS;
+    return await this.booksService.findAll();
   }
 }
