@@ -23,4 +23,11 @@ export class BooksResolver {
   async createBook(@Args('data') data: CreateBookInput): Promise<Book> {
     return await this.booksService.create(data);
   }
+
+  @Mutation(() => String)
+  async deleteBook(
+    @Args('id', { type: () => String }) id: string,
+  ): Promise<string> {
+    return await this.booksService.delete(id);
+  }
 }

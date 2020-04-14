@@ -24,4 +24,11 @@ export class BooksService {
   async create(data: CreateBookInput): Promise<Book> {
     return await this.bookRepository.save(data);
   }
+
+  async delete(id: string): Promise<string> {
+    const book = await this.findOne(id);
+    await this.bookRepository.delete(book.id);
+
+    return book.id;
+  }
 }

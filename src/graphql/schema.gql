@@ -27,6 +27,7 @@ type Query {
 
 type Mutation {
   createBook(data: CreateBookInput!): Book!
+  deleteBook(id: String!): String!
 }
 
 input CreateBookInput {
