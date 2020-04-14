@@ -52,9 +52,6 @@ $ docker exec -it books_mysql bash -c "mysql -u root -p"
 
 
 ```bash
-# Lint error check by TSLint
-$ yarn lint
-
-# Bulk format by Prettier
-$ yarn format
+# Lint error check & Auot format
+$ yarn lint:fix
 ```
