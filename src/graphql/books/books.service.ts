@@ -15,4 +15,8 @@ export class BooksService {
   async findAll(): Promise<Book[]> {
     return await this.bookRepository.find();
   }
+
+  async findOne(id: string): Promise<Book> {
+    return await this.bookRepository.findOne(id);
+  }
 }

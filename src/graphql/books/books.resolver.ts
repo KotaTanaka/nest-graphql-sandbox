@@ -1,4 +1,4 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Args, Resolver, Query } from '@nestjs/graphql';
 
 // from app
 import { Book } from '@/graphql/books/book.entity';
@@ -11,5 +11,10 @@ export class BooksResolver {
   @Query(() => [Book])
   async books(): Promise<Book[]> {
     return await this.booksService.findAll();
+  }
+
+  @Query(() => Book)
+  async book(@Args('id', { type: () => String }) id: string): Promise<Book> {
+    return await this.booksService.findOne(id);
   }
 }

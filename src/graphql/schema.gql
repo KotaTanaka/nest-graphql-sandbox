@@ -22,4 +22,5 @@ scalar DateTime
 
 type Query {
   books: [Book!]!
+  book(id: String!): Book!
 }
