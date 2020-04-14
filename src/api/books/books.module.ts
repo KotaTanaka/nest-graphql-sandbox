@@ -10,6 +10,5 @@ import { BooksController } from '@/api/books/books.controller';
   imports: [TypeOrmModule.forFeature([Book])],
   providers: [BooksService],
   controllers: [BooksController],
-  exports: [TypeOrmModule],
 })
 export class BooksModule {}
