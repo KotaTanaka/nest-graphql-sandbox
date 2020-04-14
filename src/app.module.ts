@@ -5,9 +5,6 @@ import { BooksApiModule } from '@/api/api.module';
 import { BooksGqlModule } from '@/graphql/graphql.module';
 
 @Module({
-  imports: [
-    BooksApiModule,
-    BooksGqlModule,
-  ],
+  imports: [BooksApiModule, BooksGqlModule],
 })
 export class AppModule {}
