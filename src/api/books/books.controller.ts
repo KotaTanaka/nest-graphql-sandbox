@@ -9,10 +9,10 @@ import {
 } from '@nestjs/common';
 
 // from app
-import { BooksService } from '@/api/books/books.service';
-import { Book } from '@/api/books/book.entity';
-import { CreateBookBody } from '@/api/books/dto/create-book-body.dto';
-import { UpdateBookBody } from '@/api/books/dto/update-book-body.dto';
+import { Book } from '@/domain/books/book.entity';
+import { BooksService } from '@/domain/books/books.service';
+import { CreateBookBody } from '@/domain/books/dto/create-book-body.dto';
+import { UpdateBookBody } from '@/domain/books/dto/update-book-body.dto';
 import { SuccessResponse } from '@/api/model/success-response.model';
 
 @Controller('books')

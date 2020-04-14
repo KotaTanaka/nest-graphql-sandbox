@@ -3,9 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 
 // from app
+import { Book } from '@/domain/books/book.entity';
+import { BooksService } from '@/domain/books/books.service';
 import { BooksResolver } from '@/graphql/books/books.resolver';
-import { BooksService } from '@/graphql/books/books.service';
-import { Book } from '@/graphql/books/book.entity';
 
 @Module({
   providers: [BooksResolver, BooksService],

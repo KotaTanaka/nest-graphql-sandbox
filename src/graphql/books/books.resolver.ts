@@ -1,9 +1,9 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 // from app
-import { Book } from '@/graphql/books/book.entity';
-import { BooksService } from '@/graphql/books/books.service';
-import { CreateBookInput } from '@/graphql/books/dto/create-book-input.dto';
+import { Book } from '@/domain/books/book.entity';
+import { BooksService } from '@/domain/books/books.service';
+import { CreateBookBody } from '@/domain/books/dto/create-book-body.dto';
 
 @Resolver('Books')
 export class BooksResolver {
@@ -20,7 +20,7 @@ export class BooksResolver {
   }
 
   @Mutation(() => Book)
-  async createBook(@Args('data') data: CreateBookInput): Promise<Book> {
+  async createBook(@Args('data') data: CreateBookBody): Promise<Book> {
     return await this.booksService.create(data);
   }
 
