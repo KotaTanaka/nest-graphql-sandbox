@@ -22,11 +22,11 @@ export class BooksService {
     return await this.bookRepository.findOne(id);
   }
 
-  async create(body: CreateBookBody) {
+  async create(body: CreateBookBody): Promise<Book> {
     return await this.bookRepository.save(body);
   }
 
-  async update(id: string, body: UpdateBookBody) {
+  async update(id: string, body: UpdateBookBody): Promise<Book> {
     const book = await this.findOne(id);
     book.name = body.name || book.name;
     book.outline = body.outline || book.outline;
@@ -39,7 +39,7 @@ export class BooksService {
     return await this.bookRepository.save(book);
   }
 
-  async delete(id: string) {
+  async delete(id: string): Promise<string> {
     const book = await this.findOne(id);
     await this.bookRepository.delete(book.id);
 
