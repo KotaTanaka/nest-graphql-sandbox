@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 
 // from app
 import { Book } from '@/graphql/books/book.entity';
+import { CreateBookInput } from '@/graphql/books/dto/create-book-input.dto';
 
 @Injectable()
 export class BooksService {
@@ -18,5 +19,9 @@ export class BooksService {
 
   async findOne(id: string): Promise<Book> {
     return await this.bookRepository.findOne(id);
+  }
+
+  async create(data: CreateBookInput): Promise<Book> {
+    return await this.bookRepository.save(data);
   }
 }

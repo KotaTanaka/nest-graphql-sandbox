@@ -24,3 +24,17 @@ type Query {
   books: [Book!]!
   book(id: String!): Book!
 }
+
+type Mutation {
+  createBook(data: CreateBookInput!): Book!
+}
+
+input CreateBookInput {
+  name: String!
+  outline: String!
+  author: String!
+  publisher: String!
+  category: String!
+  price: Float!
+  releasedAt: String!
+}
