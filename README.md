@@ -4,7 +4,7 @@
 
 ## About
 
-*TBW*
+Books data CRUD server with GraphQL / REST API.
 
 ## Technology
 
@@ -14,7 +14,7 @@
 
 ## Require
 
-* Node
+* Node `v12.x`
 * Docker, docker-compose
 
 ## Getting Started
@@ -40,7 +40,7 @@ $ yarn start:dev
 
 → http://localhost:3090
 
-#### Utility Commands
+## Utility Commands
 
 * Show MySQL
 
@@ -52,7 +52,7 @@ $ docker exec -it books_mysql bash -c "mysql -u root -p"
 
 
 ```bash
-# Lint error check & Auot format
+# Lint error check & Auto format
 $ yarn lint:fix
 ```
 
@@ -64,18 +64,18 @@ $ yarn lint:fix
 
 | Type | Name | Description |
 |:---|:---|:---|
-| Query | books | 全件取得 |
-| Query | book | 一件取得 |
-| Mutation | createBook | 登録 |
-| Mutation | updateBook | 編集 |
-| Mutation | deleteBook | 削除 |
+| Query | books | Read (List) |
+| Query | book | Read (One) |
+| Mutation | createBook | Create |
+| Mutation | updateBook | Update |
+| Mutation | deleteBook | Delete |
 
 ### REST API
 
 | Method | Path | Description |
 |:---|:---|:---|
-| GET | `/books` | 全件取得 |
-| GET | `/books/:id` | 一件取得 |
-| POST | `/books` | 登録 |
-| PUT | `/books/:id` | 編集 |
-| DELETE | `/books/:id` | 削除 |
+| GET | `/books` | Read (List) |
+| GET | `/books/:id` | Read (One) |
+| POST | `/books` | Create |
+| PUT | `/books/:id` | Update |
+| DELETE | `/books/:id` | Delete |
