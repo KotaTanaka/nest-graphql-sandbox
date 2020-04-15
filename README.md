@@ -1,6 +1,6 @@
-***nest-books-api***
+***nest-books-server***
 
-*[Frontend -  next-books-spa](https://github.com/KotaTanaka/next-books-spa)*
+*[Frontend -  next-books-client](https://github.com/KotaTanaka/next-books-client)*
 
 ## About
 
@@ -26,8 +26,8 @@ $ npm i -g @nestjs/cli
 ```
 
 ```bash
-$ git clone git@github.com:KotaTanaka/nest-books-api.git
-$ cd nest-books-api
+$ git clone git@github.com:KotaTanaka/nest-books-server.git
+$ cd nest-books-server
 $ yarn
 ```
 
