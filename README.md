@@ -11,6 +11,7 @@ Books data CRUD server with GraphQL / REST API.
 * [Nest.js](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo_text.svg" width="80" alt="Nest Logo" />
 * [TypeScript](https://github.com/microsoft/TypeScript)
 * [TypeORM](https://github.com/typeorm/typeorm)
+* GraphQL - [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start)
 
 ## Require
 
