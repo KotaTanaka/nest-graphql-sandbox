@@ -15,7 +15,7 @@ Books data CRUD server with GraphQL / REST API.
 
 ## Require
 
-* Node `v12.x`
+* Node `v14.x`
 * Docker, docker-compose
 
 ## Getting Started
