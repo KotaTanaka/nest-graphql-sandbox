@@ -1,6 +1,6 @@
 ***nest-books-server***
 
-*[Frontend -  next-books-client](https://github.com/KotaTanaka/next-books-client)*
+*[Frontend - next-books-client](https://github.com/KotaTanaka/next-books-client)*
 
 ## About
 
@@ -46,11 +46,10 @@ $ yarn start:dev
 * Show MySQL
 
 ```bash
-$ docker exec -it books_mysql bash -c "mysql -u root -p"
+$ docker-compose exec mysql bash -c "mysql -u root -p"
 ```
 
 * Lint
-
 
 ```bash
 # Lint error check & Auto format
