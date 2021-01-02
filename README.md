@@ -1,10 +1,11 @@
-***nest-books-server***
+***nest-graphql-sandbox***
 
-*[Frontend - next-books-client](https://github.com/KotaTanaka/next-books-client)*
+*[Frontend - next-frontend-sandbox](https://github.com/KotaTanaka/next-frontend-sandbox)*
 
 ## About
 
-Books data CRUD server with GraphQL / REST API.
+NestJS + TypeScript + GraphQL でのサーバーサイド開発の実験場  
+書籍管理アプリの GraphQL サーバー（REST APIもあり）
 
 ## Technology
 
@@ -13,7 +14,7 @@ Books data CRUD server with GraphQL / REST API.
 * [TypeORM](https://github.com/typeorm/typeorm)
 * GraphQL - [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start)
 
-## Require
+## Requirement
 
 * Node `v14.x`
 * Docker, docker-compose
@@ -23,19 +24,22 @@ Books data CRUD server with GraphQL / REST API.
 #### Install
 
 ```bash
+# NestJS CLI のグローバルインストール
 $ npm i -g @nestjs/cli
 ```
 
 ```bash
-$ git clone git@github.com:KotaTanaka/nest-books-server.git
-$ cd nest-books-server
+# 依存モジュールのインストール
 $ yarn
 ```
 
 #### Run
 
 ```bash
+# データベース起動
 $ docker-compose up -d
+
+# サーバー起動
 $ yarn start:dev
 ```
 
@@ -52,7 +56,7 @@ $ docker-compose exec mysql bash -c "mysql -u root -p"
 * Lint
 
 ```bash
-# Lint error check & Auto format
+# Lint エラーチェック/自動修正
 $ yarn lint:fix
 ```
 
