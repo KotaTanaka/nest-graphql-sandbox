@@ -25,7 +25,7 @@ export class BooksController {
   }
 
   @Get(':id')
-  async getBook(@Param() params): Promise<Book> {
+  async getBook(@Param() params: { id: string }): Promise<Book> {
     return await this.bookService.findOne(params.id);
   }
 
@@ -37,7 +37,7 @@ export class BooksController {
 
   @Put(':id')
   async updateBook(
-    @Param() params,
+    @Param() params: { id: string },
     @Body() body: UpdateBookBody,
   ): Promise<SuccessResponse> {
     const result = await this.bookService.update(params.id, body);
@@ -45,7 +45,7 @@ export class BooksController {
   }
 
   @Delete(':id')
-  async deleteBook(@Param() params): Promise<SuccessResponse> {
+  async deleteBook(@Param() params: { id: string }): Promise<SuccessResponse> {
     const id = await this.bookService.delete(params.id);
     return new SuccessResponse(id);
   }
