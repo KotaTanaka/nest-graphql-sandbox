@@ -1,9 +1,9 @@
 {
-  "name": "nest-books-api",
+  "name": "nest-graphql-sandbox",
   "version": "0.0.1",
-  "description": "",
-  "author": "Kota Tanaka",
-  "license": "MIT",
+  "description": "Books Management App Backend",
+  "author": "KotaTanaka",
+  "private": true,
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
