@@ -7,8 +7,6 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-
-// from app
 import { IBook } from '@/domain/books/book.interface';
 
 @Entity()

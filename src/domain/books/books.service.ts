@@ -1,8 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-
-// from app
 import { Book } from '@/domain/books/book.entity';
 import { CreateBookBody } from '@/domain/books/dto/create-book-body.dto';
 import { UpdateBookBody } from '@/domain/books/dto/update-book-body.dto';

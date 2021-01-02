@@ -7,8 +7,6 @@ import {
   Param,
   Body,
 } from '@nestjs/common';
-
-// from app
 import { Book } from '@/domain/books/book.entity';
 import { BooksService } from '@/domain/books/books.service';
 import { CreateBookBody } from '@/domain/books/dto/create-book-body.dto';
