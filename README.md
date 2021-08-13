@@ -16,7 +16,7 @@ NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り
 
 ## Requirement
 
-* Node `v14.x`
+* Node `v15.x`
 * Docker, docker-compose
 
 ## Getting Started

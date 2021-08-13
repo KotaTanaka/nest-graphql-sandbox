@@ -4,6 +4,9 @@
   "description": "Books Management App Backend",
   "author": "KotaTanaka",
   "private": true,
+  "engines": {
+    "node": "15.x"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -16,7 +19,7 @@
     "prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
   },
   "dependencies": {
-    "@apollo/gateway": "^0.21.4",
+    "@apollo/gateway": "^0.38.0",
     "@nestjs/common": "^7.6.5",
     "@nestjs/core": "^7.6.5",
     "@nestjs/graphql": "^7.9.4",
