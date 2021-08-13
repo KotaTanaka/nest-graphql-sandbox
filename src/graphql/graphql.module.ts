@@ -5,7 +5,6 @@ import { BooksModule } from '@/graphql/books/books.module';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      playground: true,
       autoSchemaFile: 'src/graphql/schema.gql',
     }),
     BooksModule,
