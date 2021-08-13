@@ -4,7 +4,7 @@
 
 ## About
 
-NestJS + TypeScript + GraphQL でのサーバーサイド開発の実験場  
+NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り  
 書籍管理アプリの GraphQL サーバー（REST APIもあり）
 
 ## Technology
