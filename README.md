@@ -7,57 +7,56 @@
 NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り  
 書籍管理アプリの GraphQL サーバー（REST APIもあり）
 
-## Technology
+## Tech Stack
 
-* [Nest.js](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo_text.svg" width="80" alt="Nest Logo" />
-* [TypeScript](https://github.com/microsoft/TypeScript)
-* [TypeORM](https://github.com/typeorm/typeorm)
-* GraphQL - [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start)
+- [Nest.js](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo_text.svg" width="80" alt="Nest Logo" />
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [TypeORM](https://github.com/typeorm/typeorm)
+- GraphQL - [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start)
 
-## Requirement
+## Requirements
 
-* Node `v15.x`
-* Docker, docker-compose
+- Node `v16.x`
+- Docker, docker-compose
 
 ## Getting Started
 
 #### Install
 
-```bash
+```sh
 # NestJS CLI のグローバルインストール
-$ npm i -g @nestjs/cli
+npm i -g @nestjs/cli
 ```
 
-```bash
+```sh
 # 依存モジュールのインストール
-$ yarn
+yarn
 ```
 
 #### Run
 
-```bash
+```sh
 # データベース起動
-$ docker-compose up -d
+docker-compose up -d
 
 # サーバー起動
-$ yarn start:dev
+yarn start:dev
 ```
 
 → http://localhost:3090
 
 ## Utility Commands
 
-* Show MySQL
+- Show MySQL
 
-```bash
-$ docker-compose exec mysql bash -c "mysql -u root -p"
+```sh
+docker-compose exec mysql bash -c "mysql -u root -p"
 ```
 
-* Lint
+- Code format
 
-```bash
-# Lint エラーチェック/自動修正
-$ yarn lint:fix
+```sh
+yarn lint:fix
 ```
 
 ## Endpoints
