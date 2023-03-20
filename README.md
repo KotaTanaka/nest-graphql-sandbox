@@ -5,7 +5,7 @@
 ## About
 
 NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り  
-書籍管理アプリの GraphQL サーバー（REST APIもあり）
+書籍管理アプリの GraphQL サーバー
 
 ## Tech Stack
 
@@ -16,7 +16,8 @@ NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り
 
 ## Requirements
 
-- Node `v16.x`
+- Node `v18.x`
+- Yarn `v1.x`
 - Docker, docker-compose
 
 ## Getting Started
