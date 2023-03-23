@@ -31,6 +31,9 @@ npm i -g @nestjs/cli
 #### Run
 
 ```sh
+# Create env file
+cp .env.sample .env
+
 # Launch DB
 docker compose up -d
 
