@@ -1,7 +1,7 @@
 import { InputType, Field } from '@nestjs/graphql';
 
 @InputType()
-export class CreateBookBody {
+export class CreateBookInput {
   @Field(() => String) readonly name: string;
   @Field(() => String) readonly outline: string;
   @Field(() => String) readonly author: string;
