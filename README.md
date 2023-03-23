@@ -1,18 +1,18 @@
-***nest-graphql-sandbox***
+**_nest-graphql-sandbox_**
 
-*[Frontend - next-frontend-sandbox](https://github.com/KotaTanaka/next-frontend-sandbox)*
+_[Frontend - next-frontend-sandbox](https://github.com/KotaTanaka/next-frontend-sandbox)_
 
 ## About
 
-NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り  
+NestJS + TypeScript + GraphQL でのバックエンド開発の素振り  
 書籍管理アプリの GraphQL サーバー
 
 ## Tech Stack
 
-- [Nest.js](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo_text.svg" width="80" alt="Nest Logo" />
 - [TypeScript](https://github.com/microsoft/TypeScript)
-- [TypeORM](https://github.com/typeorm/typeorm)
-- GraphQL - [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start)
+- [Nest.js](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo_text.svg" width="80" alt="Nest Logo" />
+- [Prisma](https://www.prisma.io/) <img src="https://prismalens.vercel.app/header/logo-dark.svg" width="80" alt="Prisma Logo" />
+- [@nestjs/graphql](https://docs.nestjs.com/graphql/quick-start) <img src="https://graphql.org/img/brand/logos/logo-wordmark.svg" width="80" alt="GraphQL Logo" />
 
 ## Requirements
 
@@ -22,42 +22,38 @@ NestJS + TypeScript + GraphQL でのサーバーサイド開発の素振り
 
 ## Getting Started
 
-#### Install
+#### Setup
 
 ```sh
-# NestJS CLI のグローバルインストール
 npm i -g @nestjs/cli
-```
-
-```sh
-# 依存モジュールのインストール
-yarn
 ```
 
 #### Run
 
 ```sh
-# データベース起動
-docker-compose up -d
+# Launch DB
+docker compose up -d
 
-# サーバー起動
+# Instal node modules
+yarn
+
+# Run local server
 yarn start:dev
 ```
 
-→ http://localhost:3090
+Run on http://localhost:3090
 
-## Utility Commands
-
-- Show MySQL
+#### Utility commands
 
 ```sh
-docker-compose exec mysql bash -c "mysql -u root -p"
-```
+# DB Migration
+yarn prisma migrate dev --name {migration_name}
 
-- Code format
+# Generate(Update) Prisma client
+yarn prisma generate
 
-```sh
-yarn lint:fix
+# Open Prisma studio(http://localhost:5555)
+yarn prisma studio
 ```
 
 ## Endpoints
@@ -66,20 +62,20 @@ yarn lint:fix
 
 `/graphql`
 
-| Type | Name | Description |
-|:---|:---|:---|
-| Query | books | Read (List) |
-| Query | book | Read (One) |
-| Mutation | createBook | Create |
-| Mutation | updateBook | Update |
-| Mutation | deleteBook | Delete |
+| Type     | Name       | Description |
+| :------- | :--------- | :---------- |
+| Query    | listBooks  | Read (List) |
+| Query    | getBook    | Read (One)  |
+| Mutation | createBook | Create      |
+| Mutation | updateBook | Update      |
+| Mutation | deleteBook | Delete      |
 
 ### REST API
 
-| Method | Path | Description |
-|:---|:---|:---|
-| GET | `/books` | Read (List) |
-| GET | `/books/:id` | Read (One) |
-| POST | `/books` | Create |
-| PUT | `/books/:id` | Update |
-| DELETE | `/books/:id` | Delete |
+| Method | Path             | Description |
+| :----- | :--------------- | :---------- |
+| GET    | `/api/books`     | Read (List) |
+| GET    | `/api/books/:id` | Read (One)  |
+| POST   | `/api/books`     | Create      |
+| PUT    | `/api/books/:id` | Update      |
+| DELETE | `/api/books/:id` | Delete      |
