@@ -1,14 +1,16 @@
-version: '3.6'
+version: '3'
+
 services:
-  mysql:
-    image: mysql:5.7
+  db:
+    image: postgres:14
+    container_name: books-db
     volumes:
-      - ./docker/db/mysql_data:/var/lib/mysql
-      - ./docker/db/config/my.cnf:/etc/mysql/conf.d/my.cnf
+      - db-data:/var/lib/postgresql/data
     ports:
-      - 4406:3306
-    container_name: books_mysql
-    hostname: mysql
+      - 5432:5432
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: books_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+volumes:
+  db-data:

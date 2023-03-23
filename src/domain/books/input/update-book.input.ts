@@ -1,7 +1,7 @@
 import { InputType, Field } from '@nestjs/graphql';
 
 @InputType()
-export class UpdateBookBody {
+export class UpdateBookInput {
   @Field(() => String, { nullable: true })
   readonly name?: string;
 
