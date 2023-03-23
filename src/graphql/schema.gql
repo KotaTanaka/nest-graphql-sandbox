@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Book {
+type BookEntity {
   id: ID!
   name: String!
   outline: String!
@@ -21,17 +21,17 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 scalar DateTime
 
 type Query {
-  books: [Book!]!
-  book(id: String!): Book!
+  listBooks: [BookEntity!]!
+  getBook(id: String!): BookEntity!
 }
 
 type Mutation {
-  createBook(data: CreateBookBody!): Book!
-  updateBook(data: UpdateBookBody!, id: String!): Book!
-  deleteBook(id: String!): String!
+  createBook(data: CreateBookInput!): BookEntity!
+  updateBook(id: String!, data: UpdateBookInput!): BookEntity!
+  deleteBook(id: String!): BookEntity!
 }
 
-input CreateBookBody {
+input CreateBookInput {
   name: String!
   outline: String!
   author: String!
@@ -41,7 +41,7 @@ input CreateBookBody {
   releasedAt: String!
 }
 
-input UpdateBookBody {
+input UpdateBookInput {
   name: String
   outline: String
   author: String
