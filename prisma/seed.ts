@@ -11,8 +11,8 @@ const postData: Book[] = [
     category: 'novel',
     price: 1540,
     releasedAt: '2023-01-01',
-    createdAt: new Date("2023-03-01T00:00:00+09:00"),
-    updatedAt: new Date("2023-03-01T00:00:00+09:00"),
+    createdAt: new Date('2023-03-01T00:00:00+09:00'),
+    updatedAt: new Date('2023-03-01T00:00:00+09:00'),
   },
   {
     id: 'f3a63736-07a2-4d94-9bb4-68a039fb0ecc',
@@ -23,8 +23,8 @@ const postData: Book[] = [
     category: 'novel',
     price: 1540,
     releasedAt: '2023-01-02',
-    createdAt: new Date("2023-03-02T00:00:00+09:00"),
-    updatedAt: new Date("2023-03-02T00:00:00+09:00"),
+    createdAt: new Date('2023-03-02T00:00:00+09:00'),
+    updatedAt: new Date('2023-03-02T00:00:00+09:00'),
   },
   {
     id: '43dd7b47-d2b5-48e8-94d3-22e4d1d21c21',
@@ -35,8 +35,8 @@ const postData: Book[] = [
     category: 'business',
     price: 1980,
     releasedAt: '2023-01-03',
-    createdAt: new Date("2023-03-03T00:00:00+09:00"),
-    updatedAt: new Date("2023-03-03T00:00:00+09:00"),
+    createdAt: new Date('2023-03-03T00:00:00+09:00'),
+    updatedAt: new Date('2023-03-03T00:00:00+09:00'),
   },
 ];
 

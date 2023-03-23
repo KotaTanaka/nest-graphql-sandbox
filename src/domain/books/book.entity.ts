@@ -1,8 +1,8 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { IBook } from '@/domain/books/book.interface';
+import type { Book } from '@prisma/client';
 
 @ObjectType()
-export class BookEntity implements IBook {
+export class BookEntity implements Book {
   @Field(() => ID)
   id: string;
 
