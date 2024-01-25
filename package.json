@@ -29,7 +29,7 @@
     "@nestjsx/crud": "^5.0.0-alpha.3",
     "@prisma/client": "4.11.0",
     "class-validator": "^0.14.0",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "graphql-tools": "^8.1.0",
     "mysql": "^2.17.1",
     "reflect-metadata": "^0.1.13",
